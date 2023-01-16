@@ -1,0 +1,50 @@
+name: lpdp
+description: Persian Linear Date Picker Example.
+
+
+publish_to: 'none' 
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.18.6 <3.0.0'
+
+dependencies:
+  persian_linear_date_picker:
+    path: ../
+  flutter:
+    sdk: flutter
+  flutter_localizations: 
+    sdk: flutter
+
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+  flutter_lints: ^2.0.0
+
+
+flutter:
+
+  uses-material-design: true
+
+ 
+  fonts:
+      - family: IS
+        fonts:
+          - asset: assets/fonts/Regular.ttf
+      - family: IS_B
+        fonts:
+          - asset: assets/fonts/Bold.ttf
+      - family: IS_L
+        fonts:
+          - asset: assets/fonts/Light.ttf
+      - family: IS_UL
+        fonts:
+          - asset: assets/fonts/UltraLight.ttf
+      - family: IS_M
+        fonts:
+          - asset: assets/fonts/Medium.ttf
+  
