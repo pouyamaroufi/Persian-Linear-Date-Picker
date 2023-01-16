@@ -1,39 +1,72 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+[![pub package](https://img.shields.io/pub/v/persian.svg)](https://pub.dartlang.org/packages/persian_linear_date_picker)
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+Utilities and Humanizer for Persian language and culture.
 
 ## Features
+* Linear Date Picker.
+* Customizable Labels.
+* Convert PersianDate to Gregorian numbers.
+* Can be used in Dart and Flutter projects.
+* Supports all mobile platforms (Android, iOS).
+* Include Example Project.
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
 
-## Getting started
+## Getting Started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+In your `pubspec.yaml` file add:
+
+```dart
+dependencies:
+  persian_linear_date_picker: any
+```
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+Import the package:
 
 ```dart
-const like = 'sample';
+import 'package:persian_linear_date_picker/persian_linear_date_picker.dart';
 ```
 
-## Additional information
+Then, use the extension methods:
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+```dart
+PersianLinearDatePicker(
+              endDate: '1405/12/29',
+              initialDate: "1401/10/26",
+              startDate: "1300/01/01",
+              dateChangeListener: (String selectedDate) {
+                print(selectedDate);
+              },
+              showMonthName: true,
+              columnWidth: 90,
+              labelStyle:
+                  const TextStyle(fontFamily: 'IS_B', color: Colors.blue),
+              selectedRowStyle: const TextStyle(fontFamily: 'IS_B'),
+              unselectedRowStyle: const TextStyle(fontFamily: 'IS_UL'),
+              isPersian: true,
+            ), 
+```
+
+
+```dart
+PersianLinearDatePicker(
+              yearText: 'Year',
+              monthText: 'Month',
+              dayText: 'Day',
+              endDate: '2025/11/20',
+              initialDate: "2023/05/17",
+              startDate: "1980/04/10",
+              dateChangeListener: (String selectedDate) {
+                print(selectedDate);
+              },
+              showMonthName: true,
+              columnWidth: 90,
+              labelStyle:
+                  const TextStyle(fontFamily: 'DIN', color: Colors.blue),
+              selectedRowStyle: const TextStyle(
+                  fontFamily: 'DIN', fontWeight: FontWeight.bold),
+              unselectedRowStyle: const TextStyle(fontFamily: 'DIN'),
+              isPersian: false,
+            ),
+```
