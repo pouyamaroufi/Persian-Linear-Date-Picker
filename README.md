@@ -1,13 +1,17 @@
 [![pub package](https://img.shields.io/pub/v/persian_linear_date_picker.svg)](https://pub.dartlang.org/packages/persian_linear_date_picker)
 
-Utilities and Humanizer for Persian language and culture.
+Shamsi Linear Date Picker for Persian language and culture.
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/pouyamaroufi/Persian-Linear-Date-Picker/master/example/assets/cover/pouyamaroufi-lpdp-cover.png" alt="package cover" width='350px' aligment='center'>
+</p>
 
 ## Features
 * Linear Date Picker.
 * Customizable Labels.
 * Convert PersianDate to Gregorian numbers.
 * Can be used in Dart and Flutter projects.
-* Supports all mobile platforms (Android, iOS).
+* Supports all platforms (Android, iOS, Windows, Linux, Mac).
 * Include Example Project.
 
 
