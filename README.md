@@ -1,4 +1,4 @@
-[![pub package](https://img.shields.io/pub/v/persian.svg)](https://pub.dartlang.org/packages/persian_linear_date_picker)
+[![pub package](https://img.shields.io/pub/v/persian_linear_date_picker.svg)](https://pub.dartlang.org/packages/persian_linear_date_picker)
 
 Utilities and Humanizer for Persian language and culture.
 
