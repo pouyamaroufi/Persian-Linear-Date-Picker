@@ -1,4 +1,5 @@
 [![pub package](https://img.shields.io/pub/v/persian_linear_date_picker.svg)](https://pub.dartlang.org/packages/persian_linear_date_picker)
+[![pub package](https://img.shields.io/badge/platform-flutter-blue.svg)](https://github.com/pouyamaroufi/persian_linear_date_picker)
 
 Shamsi Linear Date Picker for Persian language and culture.
 
