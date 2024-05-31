@@ -14,7 +14,7 @@ class NumberPicker extends StatelessWidget {
   static const double kDefaultListViewCrossAxisSize = 100.0;
 
   NumberPicker.integer({
-    Key? key,
+    super.key,
     required int initialValue,
     required this.minValue,
     required this.maxValue,
@@ -45,8 +45,7 @@ class NumberPicker extends StatelessWidget {
         ),
         decimalScrollController = null,
         listViewHeight = 3 * itemExtent,
-        integerItemCount = (maxValue - minValue) ~/ step + 1,
-        super(key: key) {
+        integerItemCount = (maxValue - minValue) ~/ step + 1 {
     onChanged(selectedIntValue);
   }
 
@@ -291,11 +290,7 @@ class _NumberPickerSelectedItemDecoration extends StatelessWidget {
   final Decoration? decoration;
 
   const _NumberPickerSelectedItemDecoration(
-      {Key? key,
-      required this.axis,
-      required this.itemExtent,
-      required this.decoration})
-      : super(key: key);
+      {required this.axis, required this.itemExtent, required this.decoration});
 
   @override
   Widget build(BuildContext context) {
