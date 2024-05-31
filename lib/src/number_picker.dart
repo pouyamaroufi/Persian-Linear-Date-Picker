@@ -130,8 +130,8 @@ class NumberPicker extends StatelessWidget {
     TextStyle defaultStyle;
     TextStyle selectedStyle;
 
-    defaultStyle = unselectedRowStyle ?? themeData.textTheme.bodyText2!;
-    selectedStyle = selectedRowStyle ?? themeData.textTheme.subtitle2!;
+    defaultStyle = unselectedRowStyle ?? themeData.textTheme.bodyMedium!;
+    selectedStyle = selectedRowStyle ?? themeData.textTheme.titleSmall!;
 
     var listItemCount = integerItemCount + 2;
 
