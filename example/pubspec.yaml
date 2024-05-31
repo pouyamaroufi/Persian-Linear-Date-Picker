@@ -1,12 +1,14 @@
 name: lpdp
 description: Persian Linear Date Picker Example.
+developer: Pouya Maroufi
+
 
 
 publish_to: 'none' 
 version: 1.0.0+1
 
 environment:
-  sdk: '>=2.18.6 <3.0.0'
+  sdk: '>=3.4.1 <4.0.0'
 
 dependencies:
   persian_linear_date_picker:
@@ -21,9 +23,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
-
-  flutter_lints: ^2.0.0
+  flutter_lints: ^3.0.0
 
 
 flutter:
