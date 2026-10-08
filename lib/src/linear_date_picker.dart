@@ -78,7 +78,8 @@ class _PersianLinearDatePickerState extends State<PersianLinearDatePicker> {
       if (widget.showDay) {
         _selectedDay = int.parse(initList[2]);
       } else {
-        _selectedDay = widget.isPersian ? Jalali.now().day : Jalali.now().day;
+        _selectedDay =
+            widget.isPersian ? Jalali.now().day : Gregorian.now().day;
       }
     } else {
       if (widget.isPersian) {
@@ -147,12 +148,19 @@ class _PersianLinearDatePickerState extends State<PersianLinearDatePicker> {
                 onChanged: (value) {
                   setState(() {
                     _selectedYear = value as int?;
+                    _selectedMonth = _selectedMonth!
+                        .clamp(_getMinimumMonth(), _getMaximumMonth());
+                    _selectedDay =
+                        _selectedDay.clamp(_getMinimumDay(), _getMaximumDay());
+                    String monthCustom =
+                        _selectedMonth.toString().padLeft(2, '0');
                     if (widget.showDay) {
+                      String dayCustom =
+                          _selectedDay.toString().padLeft(2, '0');
                       widget.dateChangeListener(
-                          "$_selectedYear/$_selectedMonth/$_selectedDay");
+                          "$_selectedYear/$monthCustom/$dayCustom");
                     } else {
-                      widget
-                          .dateChangeListener("$_selectedYear/$_selectedMonth");
+                      widget.dateChangeListener("$_selectedYear/$monthCustom");
                     }
                   });
                 }),
@@ -168,6 +176,8 @@ class _PersianLinearDatePickerState extends State<PersianLinearDatePicker> {
                 onChanged: (value) {
                   setState(() {
                     _selectedMonth = value as int?;
+                    _selectedDay =
+                        _selectedDay.clamp(_getMinimumDay(), _getMaximumDay());
                     if (widget.showDay) {
                       String monthCustom =
                           _selectedMonth.toString().padLeft(2, '0');
